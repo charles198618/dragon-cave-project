@@ -13,9 +13,11 @@ public class Main {
                 "is greedy and hungry and will eat you on sight.\r\n" +
                 "\r\n" +
                 "Which cave will you go into? (1 or 2)");
+        try {
         int UserInput=sc.nextInt();
         //int ch=sc.nextInt();   //user enters the choice of cave
         if(UserInput==randomNumber) {   //if user's choice matches with the random value
+
             System.out.println("You approach the cave...\r\n" +
                     "\r\n" +
                     "It is dark and spooky...\r\n" +
@@ -29,6 +31,10 @@ public class Main {
         }
         else {    //if the user's choice doesn't match with the random number
             System.out.println("You approached the cave\n\nA friendly dragon appears...\n\nHe shares his treasure with you\n\nCongratulations you got your treasure!");
+        }
+        }
+        catch (Exception e) {
+            System.out.println("Invalid entry");
         }
     }
 }
